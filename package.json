@@ -1,0 +1,7 @@
+{
+  "name": "vscweb",
+  "displayName": "VS Code Static Web Server",
+  "version": "0.0.1",
+  "main": "index.js",
+  "activationEvents": [ "*" ]
+}
