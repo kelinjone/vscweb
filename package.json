@@ -1,8 +1,8 @@
 {
   "name": "vscweb",
   "version": "0.0.1",
-  "displayName": "VS Code Static Web Server",
-  "description": "Static web site for developing",
+  "displayName": "VS Code WebServer",
+  "description": "%extension.description%",
   "icon": "res/icon.png",
   "publisher": "leadzen",
   "engines": { "vscode": "^0.10.0" },
@@ -11,43 +11,37 @@
   "activationEvents": [ "*" ],
   "contributes": {
     "commands": [
-      {"command": "vscweb.browser", "title": "Open with Browser", "icon": { "dark": "./res/browse.png", "light": "./res/browse.png" } },
-      {"command": "vscweb.chrome", "title": "Open with Chrome", "icon": { "dark": "./res/chrome.png", "light": "./res/chrome.png" } },
-      {"command": "vscweb.firefox", "title": "Open with firefox", "icon": { "dark": "./res/firefox.png", "light": "./res/firefox.png" } },
-      {"command": "vscweb.opera", "title": "Open with Opera", "icon": { "dark": "./res/opera.png", "light": "./res/opera.png" } },
-      {"command": "vscweb.safari", "title": "Open with Safari", "icon": { "dark": "./res/safari.png", "light": "./res/safari.png" } }
+      {"command": "vscweb.chrome", "title": "%open.with.chrome%", "icon": { "dark": "./res/chrome.png", "light": "./res/chrome.png" } },
+      {"command": "vscweb.firefox", "title": "%open.with.firefox%", "icon": { "dark": "./res/firefox.png", "light": "./res/firefox.png" } },
+      {"command": "vscweb.opera", "title": "%open.with.opera%", "icon": { "dark": "./res/opera.png", "light": "./res/opera.png" } },
+      {"command": "vscweb.safari", "title": "%open.with.safari%", "icon": { "dark": "./res/safari.png", "light": "./res/safari.png" } }
     ],
     "menus": {
       "commandPalette": [
-        { "command": "vscweb.browser", "when": "false"},
         { "command": "vscweb.chrome", "when": "false"},
         { "command": "vscweb.firefox", "when": "false"},
         { "command": "vscweb.opera", "when": "false"},
         { "command": "vscweb.safari", "when": "false"}
       ],
       "explorer/context": [
-        { "command": "vscweb.browser", "when": "resourceScheme == file", "group": "Open with" },
         { "command": "vscweb.chrome", "when": "resourceScheme == file", "group": "Open with" },
         { "command": "vscweb.firefox", "when": "resourceScheme == file", "group": "Open with" },
         { "command": "vscweb.opera", "when": "resourceScheme == file", "group": "Open with" },
         { "command": "vscweb.safari", "when": "resourceScheme == file", "group": "Open with" }
       ],
       "editor/title": [
-        { "command": "vscweb.browser", "when": "resourceScheme == file", "group": "navigation" },
-        { "command": "vscweb.chrome", "when": "resourceScheme == file", "group": "Open with" },
+        { "command": "vscweb.chrome", "when": "resourceScheme == file", "group": "navigation" },
         { "command": "vscweb.firefox", "when": "resourceScheme == file", "group": "Open with" },
         { "command": "vscweb.opera", "when": "resourceScheme == file", "group": "Open with" },
         { "command": "vscweb.safari", "when": "resourceScheme == file", "group": "Open with" }
       ],
       "editor/title/context": [
-        { "command": "vscweb.browser", "when": "resourceScheme == file", "group": "Open with" },
         { "command": "vscweb.chrome", "when": "resourceScheme == file", "group": "Open with" },
         { "command": "vscweb.firefox", "when": "resourceScheme == file", "group": "Open with" },
         { "command": "vscweb.opera", "when": "resourceScheme == file", "group": "Open with" },
         { "command": "vscweb.safari", "when": "resourceScheme == file", "group": "Open with" }
       ],
       "editor/context": [
-        { "command": "vscweb.browser", "when": "resourceScheme == file", "group": "Open with" },
         { "command": "vscweb.chrome", "when": "resourceScheme == file", "group": "Open with" },
         { "command": "vscweb.firefox", "when": "resourceScheme == file", "group": "Open with" },
         { "command": "vscweb.opera", "when": "resourceScheme == file", "group": "Open with" },

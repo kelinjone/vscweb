@@ -1,0 +1,7 @@
+{
+  "extension.description": "A static Web Server for VS Code development environment.",
+  "open.with.chrome": "Open with Chrome",
+  "open.with.firefox": "Open with Firefox",
+  "open.with.opera": "Open with Opera",
+  "open.with.safari": "Open with Safari"
+}
