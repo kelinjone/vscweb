@@ -1,0 +1,7 @@
+{
+  "extension.description": "VS Code 开发环境的静态 Web Server 。",
+  "open.with.chrome": "用 Chrome 打开",
+  "open.with.firefox": "用 Firefox 打开",
+  "open.with.opera": "用 Opera 打开",
+  "open.with.safari": "用 Safari 打开"
+}
