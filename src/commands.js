@@ -13,6 +13,9 @@ var openCommands = [
   { command: "vscweb.opera", handler: browse.bind(opera) },
   { command: "vscweb.safari", handler: browse.bind(safari) }
 ];
+if(process.platform === "win32") {
+  openCommands[4] = {command: "vscweb.edge", handler: browse.bind(edge)};
+}
 
 function browse(resource) {
   if (resource) {
@@ -34,17 +37,53 @@ function browse(resource) {
 }
 
 function chrome(url) {
-  exec('open -a "/Applications/Google Chrome.app" -n --args ' + url);
+  switch(process.platform) {
+    case "darwin":
+      exec('open -a "/Applications/Google Chrome.app" -n --args ' + url);
+      break;
+    case "win32":
+      exec('start chrome "'+url+'"');
+      break;
+  };
 }
 
 function firefox(url) {
-  exec("open -a Firefox " + url);
+  switch(process.platform) {
+    case "darwin":
+      exec("open -a Firefox " + url);
+      break;
+    case "win32":
+      exec('start firefox "'+url+'"');
+      break;
+  };
 }
 
 function opera(url) {
-  exec("open -a Opera " + url);
+  switch(process.platform) {
+    case "darwin":
+      exec("open -a Opera " + url);
+      break;
+    case "win32":
+      exec('start opera "'+url+'"');
+      break;
+  };
 }
 
 function safari(url) {
-  exec("open -a Safari " + url);
+  switch(process.platform) {
+    case "darwin":
+      exec("open -a Safari " + url);
+      break;
+    case "win32":
+      exec('start safari "'+url+'"');
+      break;
+  };
+}
+
+function edge(url) {
+  switch(process.platform) {
+    case "win32":
+      exec('start microsoft-edge:'+url);
+      break;
+  };  
 }

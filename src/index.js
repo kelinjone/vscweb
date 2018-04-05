@@ -27,7 +27,7 @@ function openWebFolders(folders) {
   if (folders)
     for (var i = 0; i < folders.length; i++) {
       var folder = folders[i];
-      folder.server = server(folder.uri.path);
+      folder.server = server(folder.uri.fsPath);
     }
 }
 
